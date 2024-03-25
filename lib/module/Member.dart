@@ -4,7 +4,7 @@ class Member{
  String Membername;
  String Memberemail;
   String Memberphone;
-  String Memberaddress;
+  String Note;
 
 
 
@@ -16,7 +16,7 @@ class Member{
     required this.Membername,
     required this.Memberemail,
     required this.Memberphone,
-    required this.Memberaddress,
+    required this.Note,
   });
 
 }

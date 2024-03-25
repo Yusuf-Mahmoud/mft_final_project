@@ -1,8 +1,10 @@
 {
-    "dashboard": "لوحة التحكم",
+    "home": "الرئيسية",
     "issuedbook": "الإعارة",
     "books" : "الكتاب",
     "members" : "الاعضاء",
     "settings": "الأعدادات",
-    "help": "المساعدة"
+    "help": "المساعدة",
+    "hello": "مرحبا,Admin!\uD83D\uDC4B",
+    "AllBooks" : "جميع الكتب"
 }

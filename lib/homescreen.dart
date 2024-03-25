@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     List<String> appbartitles = [
-      AppLocalizations.of(context)!.dashboard,
+      AppLocalizations.of(context)!.home,
       AppLocalizations.of(context)!.issuedbook,
       AppLocalizations.of(context)!.books,
       AppLocalizations.of(context)!.members,
@@ -43,6 +43,12 @@ class _HomeScreenState extends State<HomeScreen> {
     var mediaQuery = MediaQuery.of(context);
     return Scaffold(
       appBar: AppBar(
+        leading: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: CircleAvatar(
+            backgroundImage: AssetImage('assets/images/MFT-logo.png'),
+          ),
+        ),
         title: Padding(
           padding: const EdgeInsets.only(left: 20),
           child: Align(
@@ -56,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
             flex: 5,
             child: Container(
               height: mediaQuery.size.height,
-              color: const Color(0xffffffff),
+              color: apptheme.secondarycolor,
               child: Column(
                 children: [
                   const SizedBox(

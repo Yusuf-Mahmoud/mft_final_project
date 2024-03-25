@@ -1,10 +1,12 @@
 {
-    "dashboard": "Dashboard",
+    "home": "Home",
     "issuedbook": "Issue Book",
     "books" : "Books",
     "members" : "Members",
     "settings": "Settings",
-    "help": "Help"
+    "help": "Help",
+    "hello": "Hello,Admin!\uD83D\uDC4B",
+    "allbooks": "All Books"
     
 
 }

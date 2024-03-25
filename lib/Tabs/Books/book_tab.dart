@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mft_final_project/Tabs/Books/addbook.dart';
 import 'package:mft_final_project/module/books.dart';
 
 class BookTab extends StatelessWidget {
@@ -44,6 +45,24 @@ class BookTab extends StatelessWidget {
     ];
     return Column(
       children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text('Title',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            Text('Genre',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            Text('Published Date',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            Text('Copies Available',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            Text('ISBN',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            Text('Department ID',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          ],
+        ),
+        SizedBox(height: 10),
         Expanded(
           child: ListView.builder(
             itemCount: book.length,
@@ -67,6 +86,15 @@ class BookTab extends StatelessWidget {
               );
             },
           ),
+        ),
+        ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => AddBookPage()),
+            );
+          },
+          child: Text('Add Book', style: TextStyle(fontSize: 20)),
         ),
       ],
     );

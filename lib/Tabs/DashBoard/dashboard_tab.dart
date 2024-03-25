@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:mft_final_project/Theme.dart';
 
@@ -12,6 +13,9 @@ class _DashBoardTabState extends State<DashBoardTab> {
 
   @override
   Widget build(BuildContext context) {
+    List<String> trans = [
+      AppLocalizations.of(context)!.hello,
+    ];
     var dateFormat = DateFormat('MMMdd,yyyy|EEEE,hh:mm a ');
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -19,15 +23,11 @@ class _DashBoardTabState extends State<DashBoardTab> {
         SizedBox(height: 10),
         Padding(
           padding: EdgeInsets.only(left: 20, right: 20),
-          child: Text(
-            'Hello,'
-            'Admin!'
-            '👋',
-            style: TextStyle(
-                fontSize: 33,
-                fontWeight: FontWeight.bold,
-                color: apptheme.primarycolor),
-          ),
+          child: Text(trans[0],
+              style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: apptheme.primarycolor)),
         ),
         Padding(
           padding: const EdgeInsets.only(left: 20, right: 20),
@@ -90,21 +90,26 @@ class _DashBoardTabState extends State<DashBoardTab> {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(right: 20, top: 35),
-                            child: Icon(Icons.person,
-                                color: apptheme.primarycolor),
+                            child: Container(
+                              width: 40,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: apptheme.primarycolor,
+                              ),
+                              child: Icon(Icons.person, color: Colors.white),
+                            ),
                           ),
                         ],
                       ),
                       Spacer(),
                       Padding(
                         padding: const EdgeInsets.only(left: 20, bottom: 10),
-                        child: Text(
-                          'ALL BOOKS',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                        child: Text(AppLocalizations.of(context)!.allbooks,
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black)),
                       ),
                     ],
                   ),

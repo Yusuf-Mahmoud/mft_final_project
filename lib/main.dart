@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:mft_final_project/Tabs/settings/settingprovider.dart';
 import 'package:mft_final_project/Theme.dart';
 import 'package:mft_final_project/homescreen.dart';
 import 'package:mft_final_project/login.dart';
 import 'package:provider/provider.dart';
 
-void main() {
-  runApp(ChangeNotifierProvider(
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
+  runApp(ChangeNotifierProvider(    
       create: (context) {
         return settingsprovider();
       },
